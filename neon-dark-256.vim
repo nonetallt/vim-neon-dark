@@ -11,7 +11,7 @@ let colors_name = "neon-dark"
 if version >= 700
 highlight CursorLine guifg=#ffffff guibg=#303030 ctermfg=231 ctermbg=236 cterm=NONE
 highlight CursorColumn guibg=#2d2d2d ctermbg=236
-highlight MatchParen guifg=#1515ff guibg=#f2ff06 ctermfg=21 ctermbg=226
+highlight MatchParen guifg=#1515ff guibg=#303030 ctermfg=21 ctermbg=236
 highlight Pmenu guifg=#ffffff guibg=#666666 ctermfg=231 ctermbg=241
 highlight PmenuSel guifg=#ffffff guibg=#93b5bf ctermfg=231 ctermbg=109
 endif
