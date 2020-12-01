@@ -4,6 +4,18 @@ MattDMo's SublimeText [Neon-color-scheme](https://github.com/MattDMo/Neon-color-
 ![Laravel model with neon-dark](http://i.imgur.com/yC5CPQR.png)
 
 # Installation
+
+## Recommended
+
+Use a plugin manager and vim should be able to use the colorschemes provided by
+this repo (tested with [junegunn/vim-plug](https://github.com/junegunn/vim-plug)).
+
+```
+Plug 'nonetallt/vim-neon-dark'
+```
+
+## Manual
+
 Copy the colorscheme file to you .vim/colors folder.
 
 In your .vimrc file:
