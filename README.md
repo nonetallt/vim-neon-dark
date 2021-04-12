@@ -16,7 +16,7 @@ Plug 'nonetallt/vim-neon-dark'
 
 #### Manual
 
-Copy the colorscheme file to you .vim/colors directory.
+Copy the colorscheme file to your .vim/colors directory.
 
 ## Usage
 
