@@ -26,20 +26,29 @@ Set the colorscheme in your `.vimrc` (vim) file or `init.vim` (neovim)
 colorscheme neon-dark
 ```
 
-#### Terminal full color palette
-
-Enable `termguicolors` if you're using a terminal that supports the full palette.
+Enable `termguicolors` if you're using a terminal that [supports the full palette](https://github.com/termstandard/colors).
 
 ```vim
 set termguicolors
 colorscheme neon-dark
 ```
 
-#### Terminal 256 color palette
-
-Enable `t_Co=256` if you're using a terminal that does not support the full palette.
+Enable `t_Co=256` if you're using a terminal that does not [support the full palette](https://github.com/termstandard/colors).
 
 ```vim
 set t_Co=256
 colorscheme neon-dark
 ```
+
+## Versions
+
+#### 2.0.0
+
+- Add variables for the color palette
+- Homogenize highlight colors between gui and terminal
+- Remove ctrlp.vim plugin specific highlights
+- Remove `neon-dark-256`, it's now merged to `neon-dark`
+
+#### 1.0.0
+
+The original release version.
