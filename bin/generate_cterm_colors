@@ -1,0 +1,53 @@
+#!/usr/bin/env php
+<?php
+
+if(! isset($argv[1])) {
+    echo "Missing required argument 1: input";
+    exit(1);
+}
+
+$filepath = $argv[1];
+
+if(! file_exists($filepath)) {
+    echo "Could not find file '$filepath'";
+    exit(1);
+}
+
+function find256Color(string $hex) : int
+{
+    $termColors = require dirname(__DIR__) . '/256colors.php';
+    $rgb = array_map(fn($hex2) => hexdec($hex2), str_split($hex, 2));
+    $lowestDiff = PHP_INT_MAX;
+    $lowestDiffNum = 0;
+
+    foreach($termColors as $number => $color) {
+        $diff = abs($rgb[0] - $color['r']) + abs($rgb[1] - $color['g']) + abs($rgb[2] - $color['b']);
+
+        if($diff < $lowestDiff) {
+            $lowestDiff = $diff;
+            $lowestDiffNum = $number;
+        }
+    }
+
+    return $lowestDiffNum;
+}
+
+$fileContent = file_get_contents($filepath);
+$fgpattern = '/guifg=#[0-9a-fA-F]{6}/';
+$bgPattern = '/guibg=#[0-9a-fA-F]{6}/';
+
+$fileContent = preg_replace_callback_array([
+        $fgpattern => function($matches) {
+            $ctermfg = find256Color(explode('#', $matches[0])[1]);
+            return $matches[0] . " ctermfg=$ctermfg";
+        },
+        $bgPattern => function($matches) {
+            $ctermbg = find256Color(explode('#', $matches[0])[1]);
+            return $matches[0] . " ctermbg=$ctermbg";
+        }
+    ]
+, $fileContent);
+
+echo $fileContent;
+file_put_contents($filepath, $fileContent);
+exit(0);
