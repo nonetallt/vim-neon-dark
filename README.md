@@ -10,7 +10,7 @@ MattDMo's SublimeText [Neon-color-scheme](https://github.com/MattDMo/Neon-color-
 Use a plugin manager and vim should be able to use the colorschemes provided by
 this repo (tested with [junegunn/vim-plug](https://github.com/junegunn/vim-plug)).
 
-```
+```vim
 Plug 'nonetallt/vim-neon-dark'
 ```
 
@@ -20,15 +20,26 @@ Copy the colorscheme file to your .vim/colors directory.
 
 ## Usage
 
-Set the colorscheme in your .vimrc (vim) file or init.vim (neovim)
+Set the colorscheme in your `.vimrc` (vim) file or `init.vim` (neovim)
 
-#### Full color palette
-
-```colorscheme neon-dark```
-
-#### 256 color palette 
-
+```vim
+colorscheme neon-dark
 ```
+
+#### Terminal full color palette
+
+Enable `termguicolors` if you're using a terminal that supports the full palette.
+
+```vim
+set termguicolors
+colorscheme neon-dark
+```
+
+#### Terminal 256 color palette
+
+Enable `t_Co=256` if you're using a terminal that does not support the full palette.
+
+```vim
 set t_Co=256
-colorscheme neon-dark-256
+colorscheme neon-dark
 ```
