@@ -40,28 +40,28 @@ let g:nd_pink         = '#ff06fb'
 let g:nd_magenta      = '#ff07a2'
 
 "  General                 colors
-hi CursorLine              guifg=#ffffff   guibg=#303030
+hi CursorLine              guifg=#ffffff  guibg=#303030
 hi CursorColumn            guibg=#2d2d2d
-hi MatchParen              guifg=#1515ff   guibg=#303030
-hi Pmenu                   guifg=#ffffff   guibg=#666666
-hi PmenuSel                guifg=#ffffff   guibg=#93b5bf
+hi MatchParen              guifg=#1515ff  guibg=#303030
+hi Pmenu                   guifg=#ffffff  guibg=#666666
+hi PmenuSel                guifg=#ffffff  guibg=#93b5bf
 hi Cursor                  guibg=#ffffff
-hi Normal                  guifg=#f1f1f1   guibg=#000000
-hi NonText                 guifg=#a0a0a0   guibg=#000000
-hi LineNr                  guifg=#2d2d1f   guibg=#000000
+hi Normal                  guifg=#f1f1f1  guibg=#000000
+hi NonText                 guifg=#a0a0a0  guibg=#000000
+hi LineNr                  guifg=#2d2d1f  guibg=#000000
 hi SignColumn              guibg=#000000
-hi Search                  guifg=#ffffff   guibg=#5f0087
+hi Search                  guifg=#ffffff  guibg=#5f0087
 hi InSearch                guifg=#f0005e
-hi Visual                  guifg=#ff06fb   guibg=#5f005f
-hi StatusLine              guifg=#000000   guibg=#f0005e
-hi StatusLineNC            guifg=#000000   guibg=#f1f1f1
+hi Visual                  guifg=#ff06fb  guibg=#5f005f
+hi StatusLine              guifg=#000000  guibg=#f0005e
+hi StatusLineNC            guifg=#000000  guibg=#f1f1f1
 hi Directory               guifg=#cfff01
 hi Title                   guifg=#ffffff
-hi SpecialKey              guifg=#f0005e   guibg=#000000
-hi TabLine                 guifg=#7f817e   guibg=#000000
+hi SpecialKey              guifg=#f0005e  guibg=#000000
+hi TabLine                 guifg=#7f817e  guibg=#000000
 hi TabLineFill             guifg=#000000
-hi TabLineSel              guifg=#ffffff   guibg=#000000
-hi SpellBad                guifg=#ffffff   guibg=#ff0000
+hi TabLineSel              guifg=#ffffff  guibg=#000000
+hi SpellBad                guifg=#ffffff  guibg=#ff0000
 
 " Syntax                   highlighting
 hi Keyword                 guifg=#0b93ff
