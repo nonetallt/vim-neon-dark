@@ -74,7 +74,7 @@ hi Exception           guifg=#f8f8f8 ctermfg=15 guibg=#800f00 ctermbg=1
 hi Operator            guifg=#ff9720 ctermfg=208
 hi Special             guifg=#e5db74 ctermfg=186
 hi Boolean             guifg=#ff0604 ctermfg=9
-hi Type                guifg=#93b5bf ctermfg=190
+hi Type                guifg=#93b5bf ctermfg=109
 hi Identifier          guifg=#d285cc ctermfg=176
 hi Statement           guifg=#ff6d33 ctermfg=203
 hi PreProc             guifg=#f0005e ctermfg=197
@@ -82,8 +82,8 @@ hi StorageClass        guifg=#cfff01 ctermfg=190
 hi Error               guibg=#ff0000 ctermbg=9
 
 " Custom               syntax
-hi NamedType           guifg=#cfff01
-hi VisibilityModifier  guifg=#00e400 ctermfg=40 guibg=#0c3300 ctermbg=22
+hi NamedType           guifg=#cfff01 ctermfg=190
+hi VisibilityModifier  guifg=#00e400 ctermfg=40 guibg=#0c3300 ctermbg=232
 
 "  php.vim
 hi phpClass            guifg=#cfff01 ctermfg=190
@@ -126,9 +126,9 @@ hi def link @variable.this        phpVarSelector
 hi def link @type.scope           phpVarSelector
 
 " plugins
-hi IndentBlanklineIndent guifg=#3D3D3D
-hi CocUnusedHighlight    guifg=#b3b3b3 guibg=#464646
-" hi CocFloating           guifg=#f0005e guibg=#464646
-" hi CocHintFloat          guifg=#f0005e guibg=#464646
-" hi CocWarningFloat       guifg=#f0005e guibg=#464646
-" hi CocErrorFloat         guifg=#f0005e guibg=#464646
+hi IndentBlanklineIndent guifg=#3D3D3D ctermfg=237
+hi CocUnusedHighlight    guifg=#b3b3b3 ctermfg=249
+" hi CocFloating           guifg=#f0005e ctermfg=197
+" hi CocHintFloat          guifg=#f0005e ctermfg=197
+" hi CocWarningFloat       guifg=#f0005e ctermfg=197
+" hi CocErrorFloat         guifg=#f0005e ctermfg=197
