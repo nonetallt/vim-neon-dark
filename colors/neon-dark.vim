@@ -111,8 +111,8 @@ hi def link @accessor.member      phpMemberSelector
 hi def link @namespace.name       Special
 hi def link @namespace.keyword    SpecialKey
 hi def link @namespace.separator  SpecialKey
-hi def link @constructor          phpClass
-hi def link @class.name           phpIdentifierSimply
+hi def link @constructor          phpIdentifierSimply
+hi def link @class.name           phpClass
 hi def link @constant.builtin     Constant
 hi def link @type.named           NamedType
 hi def link @type.qualifier       VisibilityModifier
