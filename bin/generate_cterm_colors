@@ -32,22 +32,47 @@ function find256Color(string $hex) : int
     return $lowestDiffNum;
 }
 
-$fileContent = file_get_contents($filepath);
-$fgpattern = '/guifg=#[0-9a-fA-F]{6}/';
-$bgPattern = '/guibg=#[0-9a-fA-F]{6}/';
+function generateCtermColor(array $lines, string $pattern, string $selectorString) : string
+{
+    $content = '';
+    $guiString = "gui$selectorString";
+    $ctermString = "cterm$selectorString";
 
-$fileContent = preg_replace_callback_array([
-        $fgpattern => function($matches) {
-            $ctermfg = find256Color(explode('#', $matches[0])[1]);
-            return $matches[0] . " ctermfg=$ctermfg";
-        },
-        $bgPattern => function($matches) {
-            $ctermbg = find256Color(explode('#', $matches[0])[1]);
-            return $matches[0] . " ctermbg=$ctermbg";
+    foreach($lines as $line) {
+        $result = preg_match($pattern, $line, $matches, PREG_OFFSET_CAPTURE);
+
+        if($result !==1) {
+            $content .= $line;
+            continue;
         }
-    ]
-, $fileContent);
 
-echo $fileContent;
+        var_dump($guiString);
+        [$guiMatch, $guiOffset] = $matches[$guiString];
+
+        if(! isset(explode('#', $guiMatch)[1])) {
+            var_dump($guiMatch);
+        }
+
+        $ctermColor = find256Color(explode('#', $guiMatch)[1]);
+
+        if(isset($matches[$ctermString])) {
+            [$ctermMatch, $ctermOffset] = $matches[$ctermString];
+            $line = substr_replace($line, "$ctermString=$ctermColor", $ctermOffset, strlen($ctermMatch));
+        }
+        else {
+            $line = substr_replace($line, "$guiMatch $ctermString=$ctermColor", $guiOffset, -1);
+        }
+
+        $content .= $line;
+    }
+
+    return $content;
+}
+
+$fgPattern = '/(?<guifg>guifg=#[0-9a-fA-F]{6})(.+(?<ctermfg>ctermfg=[0-9]{1,3}))?/';
+$bgPattern = '/(?<guibg>guibg=#[0-9a-fA-F]{6})(.+(?<ctermbg>ctermbg=[0-9]{1,3}))?/';
+$fileContent = generateCtermColor(file($filepath), $fgPattern, 'fg');
+$fileContent = generateCtermColor(array_map(fn($line) => $line . PHP_EOL, explode(PHP_EOL, $fileContent)), $bgPattern, 'bg');
+
 file_put_contents($filepath, $fileContent);
 exit(0);
