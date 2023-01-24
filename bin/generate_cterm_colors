@@ -46,13 +46,7 @@ function generateCtermColor(array $lines, string $pattern, string $selectorStrin
             continue;
         }
 
-        var_dump($guiString);
         [$guiMatch, $guiOffset] = $matches[$guiString];
-
-        if(! isset(explode('#', $guiMatch)[1])) {
-            var_dump($guiMatch);
-        }
-
         $ctermColor = find256Color(explode('#', $guiMatch)[1]);
 
         if(isset($matches[$ctermString])) {
