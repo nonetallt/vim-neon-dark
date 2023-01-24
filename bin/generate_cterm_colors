@@ -15,7 +15,7 @@ if(! file_exists($filepath)) {
 
 function find256Color(string $hex) : int
 {
-    $termColors = require dirname(__DIR__) . '/256colors.php';
+    $termColors = require dirname(__DIR__) . '/php/256colors.php';
     $rgb = array_map(fn($hex2) => hexdec($hex2), str_split($hex, 2));
     $lowestDiff = PHP_INT_MAX;
     $lowestDiffNum = 0;
