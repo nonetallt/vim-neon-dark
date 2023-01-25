@@ -84,6 +84,8 @@ hi Error               guibg=#ff0000 ctermbg=9
 " Custom               syntax
 hi NamedType           guifg=#cfff01 ctermfg=190
 hi VisibilityModifier  guifg=#00e400 ctermfg=40 guibg=#0c3300 ctermbg=232
+hi CommentVar          guifg=#82357C
+hi CommentVarSign      guifg=#AF009A
 
 "  php.vim
 hi phpClass            guifg=#cfff01 ctermfg=190
@@ -106,28 +108,27 @@ hi phpMemberSelector   guifg=#48ffc2 ctermfg=85
 hi phpDocTags          guifg=#00d5ff ctermfg=45
 
 " treesitter
-hi def link @accessor.call        phpMemberSelector
-hi def link @accessor.member      phpMemberSelector
-hi def link @namespace.name       Special
-hi def link @namespace.keyword    SpecialKey
-hi def link @namespace.separator  SpecialKey
-hi def link @constructor          phpIdentifierSimply
-hi def link @class.name           phpClass
-hi def link @constant.builtin     Constant
-hi def link @type.named           NamedType
-hi def link @type.qualifier       VisibilityModifier
-hi def link @visibility_modifier  VisibilityModifier
-hi def link @string.double_quoted phpStringDouble
-hi def link @variable.sign        phpVarSelector
-hi def link @method.definition    phpFunction
-hi def link @function.definition  phpFunction
-hi def link @tag.name             phpDocTags
-hi def link @variable.this        phpVarSelector
-hi def link @type.scope           phpVarSelector
+hi def link @accessor               phpMemberSelector
+hi def link @namespace.name         Special
+hi def link @namespace.keyword      SpecialKey
+hi def link @namespace.separator    SpecialKey
+hi def link @constructor            phpIdentifierSimply
+hi def link @constant.builtin       Constant
+hi def link @type.named             NamedType
+hi def link @type.qualifier         VisibilityModifier
+hi def link @string.double_quoted   phpStringDouble
+hi def link @variable.sign          phpVarSelector
+hi def link @method.definition      phpFunction
+hi def link @function.definition    phpFunction
+hi def link @tag.name               phpDocTags
+hi def link @variable.this          phpVarSelector
+hi def link @variable.builtin.scope phpVarSelector
+hi def link @comment.parameter      CommentVar
+hi def link @comment.variable.sign      CommentVarSign
 
 " plugins
 hi IndentBlanklineIndent guifg=#3D3D3D ctermfg=237
-hi CocUnusedHighlight    guifg=#b3b3b3 ctermfg=249
+hi CocUnusedHighlight    guifg=#f1f1f1 guibg=#3D3D3D ctermfg=249
 " hi CocFloating           guifg=#f0005e ctermfg=197
 " hi CocHintFloat          guifg=#f0005e ctermfg=197
 " hi CocWarningFloat       guifg=#f0005e ctermfg=197

@@ -1,4 +1,4 @@
 ; extends
 
-(variable_name ("$") @variable.sign)
+(variable_name ("$") @comment.variable.sign) @comment.parameter
 (tag_name) @tag.name
