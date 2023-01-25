@@ -16,7 +16,7 @@
 )
 
 (namespace_definition
-    ("namespace") @namespace.keyword
+    ("namespace") @keyword.literal.namespace
 )
 
 [
@@ -73,29 +73,40 @@
 )
 
 (for_statement
-   ("for")@keyword.for
+   ("for")@keyword.literal.for
 )
 
 (foreach_statement
-   ("foreach")@keyword.foreach
+   ("foreach")@keyword.literal.foreach
 )
 
 (while_statement
-   ("while")@keyword.while
+   ("while")@keyword.literal.while
 )
 
 (if_statement
-   ("if")@keyword.if
+   ("if")@keyword.literal.if
 )
 
 (else_clause
-   ("else")@keyword.else
+   ("else")@keyword.literal.else
 )
 
 (switch_statement
-   ("switch")@keyword.switch
+   ("switch")@keyword.literal.switch
 )
 
 (case_statement
-   ("case")@keyword.case
+   ("case")@keyword.literal.case
+)
+
+[
+    ("function")
+    ("class")
+    ("trait")
+    ("interface")
+] @keyword.structure
+
+(anonymous_function_creation_expression
+    ("function") @keyword.literal.function
 )
