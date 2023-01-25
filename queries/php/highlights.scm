@@ -19,10 +19,6 @@
     ("namespace") @namespace.keyword
 )
 
-; (namespace_name
-;   ("\\")@namespace.separator
-; ) @namespace.name
-
 [
     (namespace_name)@namespace.name
     (namespace_name_as_prefix)
@@ -35,7 +31,7 @@
     (#match? @string "^\"(.+)\"$")
 )
 
-(visibility_modifier)@visibility_modifier
+(visibility_modifier)@type.qualifier.visibility
 
 (named_type)@type.named
 
@@ -46,15 +42,16 @@
     (name)? @type.named
 )
 
-(class_declaration (name)@class.name)
+(class_declaration (name)@type.named.class)
 
 (variable_name ("$")@variable.sign)
 
 (class_interface_clause (qualified_name (name) @type.named))
 
-(
- (base_clause (qualified_name (name) @type.named))@base_clause
- (#match? @base_clause "^extends")
+(class_declaration
+    (base_clause
+        (name)@type.named
+    )
 )
 
 (class_constant_access_expression
@@ -63,14 +60,42 @@
 )
 
 ; parent, static, self in :: expressions
-(relative_scope) @type.scope
+(relative_scope) @variable.builtin.scope
 
 ; override default tree-sitter @type.qualifier when static is used as call scope
 (relative_scope
-    ("static")@type.scope
+    ("static")@variable.builtin.scope
 )
 
 (variable_name
     (name) @variable.this
     (#match? @variable.this "^this$")
+)
+
+(for_statement
+   ("for")@keyword.for
+)
+
+(foreach_statement
+   ("foreach")@keyword.foreach
+)
+
+(while_statement
+   ("while")@keyword.while
+)
+
+(if_statement
+   ("if")@keyword.if
+)
+
+(else_clause
+   ("else")@keyword.else
+)
+
+(switch_statement
+   ("switch")@keyword.switch
+)
+
+(case_statement
+   ("case")@keyword.case
 )
