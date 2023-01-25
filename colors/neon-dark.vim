@@ -84,8 +84,8 @@ hi Error               guibg=#ff0000 ctermbg=9
 " Custom               syntax
 hi NamedType           guifg=#cfff01 ctermfg=190
 hi VisibilityModifier  guifg=#00e400 ctermfg=40 guibg=#0c3300 ctermbg=232
-hi CommentVar          guifg=#82357C
-hi CommentVarSign      guifg=#AF009A
+hi CommentVar          guifg=#82357C ctermfg=96
+hi CommentVarSign      guifg=#AF009A ctermfg=126
 
 "  php.vim
 hi phpClass            guifg=#cfff01 ctermfg=190
@@ -128,7 +128,7 @@ hi def link @comment.variable.sign      CommentVarSign
 
 " plugins
 hi IndentBlanklineIndent guifg=#3D3D3D ctermfg=237
-hi CocUnusedHighlight    guifg=#f1f1f1 guibg=#3D3D3D ctermfg=249
+hi CocUnusedHighlight    guifg=#f1f1f1 ctermfg=255
 " hi CocFloating           guifg=#f0005e ctermfg=197
 " hi CocHintFloat          guifg=#f0005e ctermfg=197
 " hi CocWarningFloat       guifg=#f0005e ctermfg=197
