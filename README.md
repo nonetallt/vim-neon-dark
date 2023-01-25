@@ -15,11 +15,12 @@ Includes improved syntax highlighting for the following languages using [nvim-tr
 
 #### Recommended
 
-Use a plugin manager and vim should be able to use the colorschemes provided by
+Use a plugin manager and vim should be able to use the colorscheme provided by
 this repo (tested with [junegunn/vim-plug](https://github.com/junegunn/vim-plug)).
 
 ```vim
-Plug 'nonetallt/vim-neon-dark'
+" you can select the version with the corresponding tag
+Plug 'nonetallt/vim-neon-dark', { 'tag': '2.0.0' }
 ```
 
 #### Manual
