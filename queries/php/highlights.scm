@@ -110,3 +110,10 @@
 (anonymous_function_creation_expression
     ("function") @keyword.literal.function
 )
+
+(use_declaration
+    (name)? @type.named
+    (qualified_name
+        (name) @type.named
+    )?
+)
