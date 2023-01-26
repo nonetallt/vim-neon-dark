@@ -59,13 +59,10 @@
   (name)
 )
 
-; parent, static, self in :: expressions
-(relative_scope) @variable.builtin.scope
-
 ; override default tree-sitter @type.qualifier when static is used as call scope
 (relative_scope
-    ("static")@variable.builtin.scope
-)
+    ("static")? @variable.builtin.scope
+) @variable.builtin.scope
 
 (variable_name
     (name) @variable.this
@@ -116,4 +113,8 @@
     (qualified_name
         (name) @type.named
     )?
+)
+
+(scoped_call_expression
+    scope: (name) @type.named
 )
