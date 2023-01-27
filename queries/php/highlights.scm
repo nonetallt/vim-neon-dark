@@ -121,3 +121,7 @@
 (namespace_aliasing_clause
     (name) @type.named
 )
+
+(enum_declaration
+    (name) @type.named.enum
+)
