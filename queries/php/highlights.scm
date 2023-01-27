@@ -100,6 +100,7 @@
     ("class")
     ("trait")
     ("interface")
+    ("enum")
 ] @keyword.structure
 
 (anonymous_function_creation_expression
