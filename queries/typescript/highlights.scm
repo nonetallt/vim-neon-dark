@@ -43,3 +43,5 @@
 ] @keyword.structure
 
 ("export") @keyword.literal.export
+
+(undefined) @constant.builtin
