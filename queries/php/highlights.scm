@@ -48,10 +48,8 @@
 
 (class_interface_clause (qualified_name (name) @type.named))
 
-(class_declaration
-    (base_clause
-        (name)@type.named
-    )
+(base_clause
+    (name)@type.named
 )
 
 (class_constant_access_expression
