@@ -116,3 +116,7 @@
 (scoped_call_expression
     scope: (name) @type.named
 )
+
+(namespace_aliasing_clause
+    (name) @type.named
+)
