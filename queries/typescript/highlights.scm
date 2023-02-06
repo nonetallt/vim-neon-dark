@@ -45,8 +45,3 @@
 ("export") @keyword.literal.export
 
 (undefined) @constant.builtin
-
-; <Context.Provider> -> highlight the first identifier
-(nested_identifier
-    . (identifier) @tag.root
-)
