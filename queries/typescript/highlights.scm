@@ -45,3 +45,7 @@
 ("export") @keyword.literal.export
 
 (undefined) @constant.builtin
+
+(variable_declarator
+    (identifier) @variable
+)
