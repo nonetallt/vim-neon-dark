@@ -48,5 +48,5 @@
 
 ; <Context.Provider> -> highlight the first identifier
 (nested_identifier
-    . (identifier) @type.named
+    . (identifier) @tag.root
 )

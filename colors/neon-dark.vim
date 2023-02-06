@@ -137,6 +137,7 @@ hi def link @tag                       phpSCKeyword
 hi def link @tag.name                  phpDocTags
 hi def link @tag.delimiter             Keyword
 hi def link @tag.attribute             VisibilityModifier
+hi def link @tag.root                  NamedType
 hi def link @type.generic.bracket      InSearch
 hi def link @keyword.structure         StorageClass
 
