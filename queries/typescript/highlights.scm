@@ -19,11 +19,6 @@
   name: (identifier) @function.definition
 )
 
-(variable_declarator
-    name: (identifier) @function.definition.arrow
-    value: (arrow_function)
-)
-
 (generic_type
     (type_arguments
         ("<") @type.generic.bracket
@@ -48,4 +43,9 @@
 
 (variable_declarator
     (identifier) @variable
+)
+
+(variable_declarator
+    name: (identifier) @function.definition.arrow
+    value: (arrow_function)
 )
