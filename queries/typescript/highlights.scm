@@ -39,6 +39,8 @@
 
 ("export") @keyword.literal.export
 
+("static") @type.qualifier
+
 (undefined) @constant.builtin
 
 (variable_declarator
