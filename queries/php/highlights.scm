@@ -95,6 +95,10 @@
    ("case")@keyword.literal.case
 )
 
+(continue_statement
+  ("continue")@keyword.literal.continue
+)
+
 [
     ("function")
     ("class")
