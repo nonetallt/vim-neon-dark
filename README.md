@@ -1,9 +1,9 @@
 # vim-neon-dark
-A dark theme for vim/neovim derived from MattDMo's SublimeText [Neon-color-scheme](https://github.com/MattDMo/Neon-color-scheme).
+A dark theme for vim/neovim based on MattDMo's SublimeText [Neon-color-scheme](https://github.com/MattDMo/Neon-color-scheme).
 
 Please note that this theme has slightly diverged from the parent theme over time as more and more specialized syntax groups were added to the original.
 
-![Laravel model with neon-dark](http://i.imgur.com/yC5CPQR.png)
+![neon-dark example with php and typescript](https://i.imgur.com/fTReWoj.png)
 
 Includes improved syntax highlighting for the following languages using [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter):
 - php
@@ -11,7 +11,7 @@ Includes improved syntax highlighting for the following languages using [nvim-tr
 - javascript
 - typescript
 
-Includes improved sytax  highlighting for PHP using (StanAngeloff/php.vim)[https://github.com/StanAngeloff/php.vim] syntax groups. (If you're using regular vim or neovim without treesitter).
+Includes improved sytax  highlighting for PHP using [StanAngeloff/php.vim](https://github.com/StanAngeloff/php.vim) syntax groups. (If you're using regular vim or neovim without treesitter).
 
 ## Installation
 
