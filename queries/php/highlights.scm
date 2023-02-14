@@ -35,27 +35,25 @@
 
 (named_type)@type.named
 
-(namespace_use_clause
-    (qualified_name
-        (name)@type.named
-    )?
-    (name)? @type.named
+(qualified_name
+    (name) @type.named
 )
 
-(class_declaration (name)@type.named.class)
-
-(variable_name ("$")@variable.sign)
+(class_declaration
+  (name)? @type.named.class
+  (base_clause
+    (name)? @type.named
+  )?
+)
 
 (class_interface_clause (qualified_name (name) @type.named))
-
-(base_clause
-    (name)@type.named
-)
 
 (class_constant_access_expression
   (name) @type.named
   (name)
 )
+
+(variable_name ("$")@variable.sign)
 
 ; override default tree-sitter @type.qualifier when static is used as call scope
 (relative_scope
