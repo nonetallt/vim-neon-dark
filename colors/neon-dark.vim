@@ -77,12 +77,13 @@ hi Exception           guifg=#f8f8f8 ctermfg=15 guibg=#800f00 ctermbg=1
 hi Operator            guifg=#ff9720 ctermfg=208
 hi Special             guifg=#e5db74 ctermfg=186
 hi Boolean             guifg=#ff0604 ctermfg=9
-hi Type                guifg=#93b5bf ctermfg=198
+hi Type                guifg=#93b5bf ctermfg=109
 hi Identifier          guifg=#d285cc ctermfg=176
 hi Statement           guifg=#ff6d33 ctermfg=203
 hi PreProc             guifg=#f0005e ctermfg=197
-hi StorageClass        guifg=#FF4101 ctermfg=190
+hi StorageClass        guifg=#FF4101 ctermfg=202
 hi Error               guibg=#ff0000 ctermbg=9
+hi Todo                guifg=#fff57f ctermfg=228 guibg=NONE ctermfg=NONE
 
 " Custom               syntax
 hi NamedType           guifg=#cfff01 ctermfg=190
@@ -92,6 +93,8 @@ hi CommentVarSign      guifg=#AF009A ctermfg=126
 hi BlueGray            guifg=#93b5bf ctermfg=109
 hi BlueDark            guifg=#1515ff ctermfg=12
 hi BlueNight           guifg=#07019a ctermfg=18
+hi Warning             guifg=#FF4101 ctermfg=202
+hi Danger              guifg=#ff0000 ctermfg=9
 
 "  php.vim
 hi phpClass            guifg=#cfff01 ctermfg=190
@@ -130,6 +133,13 @@ hi def link @variable.sign             phpVarSelector
 hi def link @variable.this             phpVarSelector
 hi def link @variable.super            phpVarSelector
 hi def link @variable.builtin.scope    phpVarSelector
+
+hi def link @text.note                 CommentVar
+hi def link @text.warning              Warning
+hi def link @text.danger               Danger
+
+hi def link @comment.tag.name          CommentVar
+hi def link @comment.tag.user          CommentVarSign
 hi def link @comment.parameter         CommentVar
 hi def link @comment.variable.sign     CommentVarSign
 

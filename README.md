@@ -8,6 +8,7 @@ Please note that this theme has slightly diverged from the parent theme over tim
 Includes improved syntax highlighting for the following languages using [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter):
 - php
 - phpdoc
+- comment
 - javascript
 - typescript
 
@@ -45,6 +46,11 @@ colorscheme neon-dark
 ```
 
 ## Versions
+
+#### 2.1.0
+- Add custom treesitter predicates (`none-of?` and `notmatch?`)
+- Add treesitter support for comment
+- Add syntax highlights for treesitter text groups: (`@text.todo`, `@text.note`, `@text.danger`, `@text.warning`)
 
 #### 2.0.0
 
