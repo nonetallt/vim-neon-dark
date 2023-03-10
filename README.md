@@ -23,7 +23,7 @@ this repo (tested with [junegunn/vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
 " you can select the version with the corresponding tag
-Plug 'nonetallt/vim-neon-dark', { 'tag': '2.0.0' }
+Plug 'nonetallt/vim-neon-dark', { 'tag': '2.1.0' }
 ```
 
 #### Manual
