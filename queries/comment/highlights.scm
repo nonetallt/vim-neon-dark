@@ -6,8 +6,8 @@
 )
 
 (tag
-    (name) @text.note
-    (#match? @text.note "^NOTE.+")
+    (name) @comment.note
+    (#match? @comment.note "^NOTE.+")
 )
 
 (tag
