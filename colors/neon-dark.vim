@@ -117,26 +117,27 @@ hi phpMemberSelector   guifg=#48ffc2 ctermfg=85
 hi phpDocTags          guifg=#00d5ff ctermfg=45
 
 " treesitter
-hi def link @accessor                  phpMemberSelector
-hi def link @namespace.name            Special
-hi def link @keyword.literal.namespace SpecialKey
-hi def link @keyword.literal.export    SpecialKey
-hi def link @namespace.separator       SpecialKey
-hi def link @constructor               phpIdentifierSimply
-hi def link @constant.builtin          Constant
-hi def link @type.named                NamedType
-hi def link @type.qualifier            VisibilityModifier
-hi def link @string.double_quoted      phpStringDouble
-hi def link @method.definition         phpFunction
-hi def link @function.definition       phpFunction
-hi def link @variable.sign             phpVarSelector
-hi def link @variable.this             phpVarSelector
-hi def link @variable.super            phpVarSelector
-hi def link @variable.builtin.scope    phpVarSelector
+hi def link @accessor                   phpMemberSelector
+hi def link @module.name                Special
+hi def link @keyword.literal.namespace  SpecialKey
+hi def link @keyword.literal.export     SpecialKey
+hi def link @namespace.separator        SpecialKey
+hi def link @constructor                phpIdentifierSimply
+hi def link @constant.builtin           Constant
+hi def link @type.named                 NamedType
+hi def link @type.qualifier             VisibilityModifier
+hi def link @string.double_quoted       phpStringDouble
+hi def link @function.method.definition phpFunction
+hi def link @function.definition        phpFunction
+hi def link @variable.sign              phpVarSelector
+hi def link @variable.this              phpVarSelector
+hi def link @variable.super             phpVarSelector
+hi def link @variable.builtin.scope     phpVarSelector
 
-hi def link @text.note                 CommentVar
-hi def link @text.warning              Warning
-hi def link @text.danger               Danger
+hi def link @comment.note                 CommentVar
+hi def link @comment.todo                 Todo
+hi def link @comment.warning              Warning
+hi def link @comment.error                Danger
 
 hi def link @comment.tag.name          CommentVar
 hi def link @comment.tag.user          CommentVarSign
