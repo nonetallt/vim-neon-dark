@@ -1,4 +1,4 @@
-local query = require "vim.treesitter.query"
+local ts = require "vim.treesitter"
 
 local M = {}
 
@@ -7,7 +7,7 @@ local noneof = function(match, _, source, predicate)
     if not node then
         return false
     end
-    local node_text = query.get_node_text(node, source)
+    local node_text = ts.get_node_text(node, source)
 
     -- Since 'predicate' will not be used by callers of this function, use it
     -- to store a string set built from the list of words to check against.
@@ -50,13 +50,13 @@ local notmatch = (function()
       end
       ---@diagnostic disable-next-line no-unknown
       local regex = compiled_vim_regexes[pred[3]]
-      return not regex:match_str(query.get_node_text(node, source))
+      return not regex:match_str(ts.get_node_text(node, source))
     end
   end)()
 
 function M.setup()
-    query.add_predicate('none-of?', noneof, true)
-    query.add_predicate('notmatch?', notmatch, true)
+    ts.query.add_predicate('none-of?', noneof, true)
+    ts.query.add_predicate('notmatch?', notmatch, true)
 end
 
 return M
