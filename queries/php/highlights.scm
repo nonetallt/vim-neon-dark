@@ -21,12 +21,10 @@
 
 [
     (namespace_name)@namespace.name
-    (namespace_name_as_prefix)
 ]("\\") @namespace.separator
 
 (
     (encapsed_string
-      (string_value)@string.double_quoted
     )@string
     (#match? @string "^\"(.+)\"$")
 )
@@ -107,10 +105,6 @@
     ("enum")
 ] @keyword.structure
 
-(anonymous_function_creation_expression
-    ("function") @keyword.literal.function
-)
-
 (use_declaration
     (name)? @type.named
     (qualified_name
@@ -120,10 +114,6 @@
 
 (scoped_call_expression
     scope: (name) @type.named
-)
-
-(namespace_aliasing_clause
-    (name) @type.named
 )
 
 (enum_declaration
